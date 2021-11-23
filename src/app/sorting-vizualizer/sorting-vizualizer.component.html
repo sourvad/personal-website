@@ -1,0 +1,48 @@
+<div class="form-container secondary-color">
+  <form (ngSubmit)="onSubmit()" #sortingForm="ngForm">
+    <div class="grid-container">
+
+      <div class="form-group grid-item">
+        <label for="initialOrder">Initial Order: </label>
+        <select class="form-control primary-color"
+          id="initialOrder"
+          required
+          [(ngModel)]="options.initialOrder"
+          name="initialOrder"
+          #initialOrder="ngModel">
+          <option class="primary-color" [value]="'random'">Random</option>
+          <option class="primary-color" [value]="'ascending'">Ascending</option>
+          <option class="primary-color" [value]="'descending'">Descending</option>
+        </select>
+      </div>
+
+      <div class="form-group grid-item">
+        <label for="numberOfEntries">Number Of Entries (Max 100): </label>
+        <input type="number"
+          class="form-control primary-color"
+          max="100"
+          min="2"
+          id="numberOfEntries"
+          required
+          [(ngModel)]="options.numberOfEntries"
+          name="numberOfEntries"
+          #numberOfEntries="ngModel">
+      </div>
+
+      <div class="form-group grid-item">
+        <label for="sortType">Sort Type: </label>
+        <select class="form-control primary-color"
+          id="sortType"
+          required
+          [(ngModel)]="options.sortType"
+          name="sortType"
+          #sortType="ngModel">
+          <option class="primary-color" [value]="'bubble'">Bubble Sort</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn grid-item ripple" [disabled]="!sortingForm.form.valid">Submit</button>
+
+    </div>
+  </form>
+</div>

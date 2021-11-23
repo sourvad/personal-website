@@ -22,6 +22,7 @@
       "rules": {
         "import/prefer-default-export": "off",
         "import/no-unresolved": "off",
+        "class-methods-use-this": "off",
         "no-useless-constructor": "off",
         "no-empty-function": "off",
         "@angular-eslint/directive-selector": [

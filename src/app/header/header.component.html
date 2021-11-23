@@ -2,8 +2,18 @@
   class="grid-container primary-color">
 
   <button
-    class="btn primary-color ripple">
+    class="btn primary-color ripple"
+    routerLink=""
+    routerLinkActive="active-tab"
+    [routerLinkActiveOptions]="{ exact: true }">
     Home
+  </button>
+
+  <button
+    class="btn primary-color ripple"
+    routerLink="/sorting-vizualizer"
+    routerLinkActive="active-tab">
+    Sorting Vizualizer
   </button>
 
 </div>
