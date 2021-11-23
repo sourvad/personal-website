@@ -1,0 +1,31 @@
+.grid-container {
+  height: 100%;
+  grid-template-rows: 9vh auto;
+  grid-template-columns: 30px;
+}
+
+.btn {
+  width: 8vw;
+  outline: none;
+  border: none;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #e79703;
+  color: #111111;
+}
+
+.ripple {
+  background-position: center;
+  transition: background 0.8s;
+}
+.ripple:hover {
+  background: #e79703 radial-gradient(circle, transparent 1%, #e79703 1%) center/15000%;
+}
+.ripple:active {
+  background-color: #f0d383;
+  background-size: 100%;
+  transition: background 0s;
+}
